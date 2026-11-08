@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Umme Habiba Mim! ✨ | আমাদের সুন্দর গল্প</title>
+  <meta name="description"
+    content="A dreamy birthday celebration website for Umme Habiba Mim created with love by Mohammed Riad Hasan.">
+  <meta name="theme-color" content="#F8DDE5">
+
+  <!-- Google Fonts for Bengali and English Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Background Animated Elements (Hearts, Sparkles, Floating Orbs) -->
+  <div class="ambient-decorations" aria-hidden="true" id="ambientDecor"></div>
+
+  <!-- Fullscreen Confetti Canvas -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- ========================================================
+       SECTION 01: PRE-LOADER & WELCOME EXPERIENCE
+       ======================================================== -->
+  <aside id="preloader" class="preloader" aria-label="Loading screen">
+    <div class="preloader-content">
+      <div class="pulsing-heart" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="56" height="56" fill="currentColor">
+          <path
+            d="M16 28.5L13.8 26.5C5.8 19.3 0.5 14.5 0.5 8.5C0.5 3.6 4.3 0 9 0C11.7 0 14.2 1.3 16 3.3C17.8 1.3 20.3 0 23 0C27.7 0 31.5 3.6 31.5 8.5C31.5 14.5 26.2 19.3 18.2 26.5L16 28.5Z" />
+        </svg>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress" id="loadingProgress"></div>
+      </div>
+      <h2 class="loader-bengali-text">একটা ছোট্ট সারপ্রাইজ তোমার জন্য...</h2>
+      <p class="loader-english-text">Made with love, just for you ✨</p>
+    </div>
+  </aside>
+
+  <!-- Welcome Modal Dialog / "Do you love me?" Interactive Card -->
+  <section id="welcomeOverlay" class="welcome-overlay" aria-modal="true" role="dialog" aria-labelledby="welcomeTitle">
+    <div class="welcome-card love-inquiry-card" id="welcomeCard">
+      <div class="welcome-badge">For Umme Habiba Mim 🌸</div>
+      <h1 id="welcomeTitle" class="welcome-heading">Do you love me? ❤️</h1>
+      <p class="welcome-message" id="welcomeMessage">
+        Before we step into your birthday world,<br>
+        there is one little question I need to know...
+      </p>
+
+      <div class="love-buttons-area" id="loveButtonsArea">
+        <button id="btnSayYes" class="btn btn-primary btn-sparkle love-btn-yes" type="button">
+          <span>Yes! ❤️</span>
+        </button>
+        <button id="btnSayNo" class="btn love-btn-no" type="button" tabindex="-1">
+          <span>No 🙈</span>
+        </button>
+      </div>
+
+      <div id="loveSuccessMsg" class="love-success-msg hidden">
+        <div class="love-success-icon">💖</div>
+        <h2 class="love-success-title">I knew it, my love! 🥰</h2>
+        <p class="love-success-subtitle">Welcome to your magical birthday world ✨</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       STICKY NAVIGATION BAR
+       ======================================================== -->
+  <header class="site-header" id="mainHeader">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">M &amp; R</span>
+        <span class="brand-text">Habiba's Day</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#celebration" class="nav-link">Celebration</a></li>
+        <li><a href="#letter" class="nav-link">Letter</a></li>
+        <li><a href="#timeline" class="nav-link">Story</a></li>
+        <li><a href="#coupleGallery" class="nav-link">Memories</a></li>
+        <li><a href="#mimGallery" class="nav-link">Gallery</a></li>
+        <li><a href="#thingsILove" class="nav-link">Moments</a></li>
+        <li><a href="#giftBox" class="nav-link">Gift</a></li>
+        <li><a href="#makeAWish" class="nav-link">Wish</a></li>
+        <li><a href="#fastMemoriesReel" class="nav-link">Surprise</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ========================================================
+         SECTION 02: HERO / GRAND BIRTHDAY INTRODUCTION
+         ======================================================== -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="hero-sparkles-container" aria-hidden="true"></div>
+
+      <!-- Floating Pastel Balloons -->
+      <div class="floating-balloons-bg" aria-hidden="true">
+        <div class="balloon balloon-1"></div>
+        <div class="balloon balloon-2"></div>
+        <div class="balloon balloon-3"></div>
+        <div class="balloon balloon-4"></div>
+        <div class="balloon balloon-5"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-tag animate-up">
+          <span class="tag-icon">✨</span>
+          <span>A Special Day For My Special Person</span>
+          <span class="tag-icon">✨</span>
+        </div>
+
+        <h1 class="hero-title-en animate-up delay-1">Happy Birthday,<br><span class="highlight-serif">Dear
+            Habiba!</span></h1>
+
+        <h2 class="hero-title-bn animate-up delay-2">শুভ জন্মদিন, প্রিয় হাবিবা! ❤️</h2>
+
+        <p class="hero-quote animate-up delay-3">
+
+        </p>
+
+        <div class="hero-badge-wrap animate-up delay-4">
+          <div class="anniversary-badge">
+            <span class="badge-title">আমাদের দ্বিতীয় জন্মদিন একসাথে</span>
+            <span class="badge-sub">Our 2nd Birthday Celebration Together • October 4 to Infinity</span>
+          </div>
+
+          <!-- Live Birthday Countdown (Only displayed when configured in js/script.js) -->
+          <div id="countdownContainer" class="countdown-container hidden" aria-label="Birthday Countdown">
+            <div class="countdown-heading">জন্মদিনের বিশেষ কাউন্টডাউন ⏳</div>
+            <div class="countdown-grid">
+              <div class="countdown-card">
+                <span class="countdown-num" id="cdDays">00</span>
+                <span class="countdown-label">দিন</span>
+              </div>
+              <div class="countdown-card">
+                <span class="countdown-num" id="cdHours">00</span>
+                <span class="countdown-label">ঘণ্টা</span>
+              </div>
+              <div class="countdown-card">
+                <span class="countdown-num" id="cdMinutes">00</span>
+                <span class="countdown-label">মিনিট</span>
+              </div>
+              <div class="countdown-card">
+                <span class="countdown-num" id="cdSeconds">00</span>
+                <span class="countdown-label">সেকেন্ড</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions animate-up delay-5">
+          <a href="#celebration" class="btn btn-primary btn-sparkle scroll-to-btn">
+            <span>Explore The Celebration ✨</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="mouse-icon"><span class="wheel"></span></span>
+        <span class="indicator-text">Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 03: THE BIRTHDAY CELEBRATION (CAKE & CONFETTI)
+         ======================================================== -->
+    <section id="celebration" class="section celebration-section" aria-labelledby="celebrationTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Birthday Party Vibes</span>
+          <h2 id="celebrationTitle" class="section-title">আজকের দিনটা শুধুই তোমার!</h2>
+          <p class="section-subtitle">A celebration of your smile, grace, and beautiful existence</p>
+          <div class="section-divider"><span>🌸</span></div>
+        </header>
+
+        <div class="cake-celebration-container">
+          <!-- Interactive Birthday Cake Graphic -->
+          <div class="cake-stage" id="cakeStage">
+            <div class="cake-pedestal"></div>
+
+            <div class="birthday-cake" id="birthdayCake" aria-label="Birthday cake with candle">
+              <!-- Top Candles -->
+              <div class="candles-wrapper">
+                <div class="cake-candle" id="mainCandle">
+                  <div class="candle-flame lit" id="candleFlame" aria-label="Candle flame">
+                    <span class="flame-core"></span>
+                  </div>
+                  <div class="candle-smoke" id="candleSmoke"></div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-wax"></div>
+                </div>
+              </div>
+
+              <!-- Top Cake Layer -->
+              <div class="cake-layer layer-top">
+                <div class="cake-frosting-top">
+                  <span class="frosting-drip drip-1"></span>
+                  <span class="frosting-drip drip-2"></span>
+                  <span class="frosting-drip drip-3"></span>
+                  <span class="frosting-drip drip-4"></span>
+                </div>
+                <div class="berries-decor">
+                  <span class="berry berry-1"></span>
+                  <span class="berry berry-2"></span>
+                  <span class="berry berry-3"></span>
+                </div>
+              </div>
+
+              <!-- Cake Mid Layer / Ribbon -->
+              <div class="cake-layer layer-middle">
+                <div class="layer-pearls"></div>
+                <span class="cake-name-ribbon">Habiba</span>
+              </div>
+
+              <!-- Cake Base Layer -->
+              <div class="cake-layer layer-base">
+                <div class="frosting-swirls"></div>
+              </div>
+
+              <!-- Exposed Inner Cut Cross-Section of Main Cake -->
+              <div class="cake-cut-cross-section" id="cakeCrossSection">
+                <div class="cross-sponge tier-top-cross"></div>
+                <div class="cross-sponge tier-mid-cross"></div>
+                <div class="cross-sponge tier-base-cross"></div>
+              </div>
+
+              <!-- Realistic Cut Slice Wedge (separates and slides out on cut) -->
+              <div class="cake-slice-piece" id="cakeSlicePiece" aria-hidden="true">
+                <div class="slice-top-berry">🍓</div>
+                <div class="slice-mini-layer slice-layer-top">
+                  <span class="slice-frosting"></span>
+                </div>
+                <div class="slice-mini-layer slice-layer-mid">
+                  <span class="slice-cream-fill"></span>
+                </div>
+                <div class="slice-mini-layer slice-layer-base">
+                  <span class="slice-cream-fill"></span>
+                </div>
+                <div class="slice-mini-plate"></div>
+              </div>
+
+              <!-- Cut Line Seam -->
+              <div class="cake-cut-seam" id="cakeCutSeam" aria-hidden="true"></div>
+            </div>
+
+            <!-- Realistic Golden Pastry Knife -->
+            <div class="virtual-knife" id="virtualKnife" aria-hidden="true">
+              <div class="knife-blade">
+                <div class="blade-edge"></div>
+                <div class="blade-shine"></div>
+              </div>
+              <div class="knife-bolster"></div>
+              <div class="knife-handle">
+                <span class="handle-rivet"></span>
+                <span class="handle-rivet"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Button & Status Message -->
+          <div class="cake-interaction-panel">
+            <button id="btnCutCake" class="btn btn-primary btn-large btn-sparkle" type="button">
+              <span class="btn-icon">🎂</span>
+              <span id="cakeBtnText">চলো, কেক কাটি! 🎂</span>
+            </button>
+
+            <div class="cake-wish-banner hidden" id="cakeWishBanner">
+              <div class="wish-banner-card">
+                <span class="wish-emoji">🎉</span>
+                <p class="wish-banner-text">
+                  "তোমার জীবনের প্রতিটি দিন ভরে উঠুক অনাবিল শান্তি, অফুরন্ত ভালোবাসা আর নির্মল হাসিতে।"
+                </p>
+                <span class="wish-author">— সবসময় তোমার মঙ্গল কামনায়, রিয়াদ ❤️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 04: A LETTER JUST FOR YOU
+         ======================================================== -->
+    <section id="letter" class="section letter-section" aria-labelledby="letterTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">A Note From My Heart</span>
+          <h2 id="letterTitle" class="section-title">একটি চিঠি, শুধু তোমার নামে... 💌</h2>
+          <p class="section-subtitle">যে কথাগুলো মুখে বলা হয়ে ওঠেনি, আজ তা লিখে জানালাম</p>
+          <div class="section-divider"><span>💌</span></div>
+        </header>
+
+        <div class="letter-card-wrapper">
+          <article class="parchment-letter">
+            <div class="letter-stamp">
+              <span class="stamp-icon">🕊️</span>
+              <span class="stamp-text">9 Nov • With Love</span>
+            </div>
+
+            <div class="letter-greeting">
+              <h3>প্রিয় হাবিবা,</h3>
+            </div>
+
+            <div class="letter-body">
+              <p>
+                প্রথমেই আমার সালাম নিও। আসসালামু আলাইকুম। শুভ জন্মদিন, প্রিয়। ❤️
+              </p>
+              <p>
+                আজ ৯ নভেম্বর, তোমার জন্মদিন। ২০০৪ সালের এই দিনে তুমি পৃথিবীতে এসেছিলে, আর কে জানতো, একদিন এই মানুষটিই
+                আমার জীবনের এতটা গুরুত্বপূর্ণ একজন হয়ে উঠবে! আজকের দিনটি শুধু তোমার জন্মদিন নয়, আমার কাছেও অনেক বিশেষ
+                একটি দিন। কারণ আজকের এই দিনেই পৃথিবীতে এসেছিল আমার সেই প্রিয় মানুষটি, যার সঙ্গে কথা না বলে, যার খোঁজ না
+                নিয়ে আমার দিন পার করতে ইচ্ছে করে না।
+              </p>
+              <p>
+                জান, আমাদের পরিচয়ের শুরুটা মনে আছে? একদিন আমি নানুর বাড়িতে গিয়েছিলাম। সেখানে অনেক ব্যস্ততার কারণে
+                অনলাইনে আসতে পারছিলাম না। তখন তুমি আমাকে অফলাইনে কল করেছিলে, আমি অনলাইনে নেই কেন তা জানতে। আর সেখান
+                থেকেই তোমার সঙ্গে আমার প্রথম ভয়েস কলে কথা বলা। তোমার কণ্ঠটা প্রথমবার শোনার পর কেমন যেন একটা ভালো লাগা
+                কাজ করেছিল। তোমার কণ্ঠ শুনে যে এতটা ভালো লাগবে, তা হয়তো তখন বুঝতে পারিনি। কিন্তু সেই প্রথম ভয়েস কলের
+                স্মৃতিটা আজও আমার কাছে অনেক সুন্দর।
+              </p>
+              <p>
+                এরপর ৪ অক্টোবর, বাসা থেকে এসে তোমার সঙ্গে দেখা করি। সেদিনের কথা মনে পড়লে এখনো ভালো লাগে। তোমাকে নিয়ে
+                ক্রাউড জোনে দই ফুচকা খেতে যাওয়া, একসঙ্গে সময় কাটানো, কত গল্প, কত হাসাহাসি! এরপর তোমাকে নিয়ে কলেজেও
+                গিয়েছিলাম। সেদিনের প্রতিটি মুহূর্তই আমার কাছে অনেক বিশেষ। হয়তো সেদিন খুব অসাধারণ কিছু করিনি, কিন্তু
+                তোমার সঙ্গে কাটানো সাধারণ মুহূর্তগুলোই আমার কাছে অসাধারণ হয়ে আছে।
+              </p>
+              <p class="letter-highlight">
+                এখন তো আমাদের প্রতিদিনের জীবনেই তুমি জড়িয়ে আছো। ভার্সিটিতে একসঙ্গে থাকা, বিভিন্ন জায়গায় ঘুরতে যাওয়া,
+                পাশাপাশি বসে গল্প করা, তোমার হাত ধরা, তোমার বকাঝকা শোনা, তোমার সঙ্গে এ টু জেড সব ধরনের কথা বলা—কী নেই
+                আমাদের মধ্যে! কখনো প্রয়োজনীয় কথা, কখনো একেবারেই অপ্রয়োজনীয় কথা, কখনো হাসাহাসি, আবার কখনো অভিমান, অভিযোগ।
+                সবকিছু মিলিয়েই আমাদের সময়গুলো কেটে যায়। অথচ এত সময় একসঙ্গে কাটানোর পরও তোমাকে নিয়ে আমার একটুও একঘেয়েমি
+                আসে না। বরং তোমাকে যত দেখি, যত সময় কাটাই, তোমার প্রতি ভালো লাগাটা যেন আরও বেড়ে যায়।
+              </p>
+              <p>
+                জানো হাবিবা, তোমার সঙ্গে কাটানো সময়গুলো আমার কাছে কতটা মূল্যবান, তা হয়তো তোমাকে কখনো ঠিকভাবে বোঝাতে
+                পারিনি। তোমার সঙ্গে থাকলে সময় কীভাবে চলে যায় বুঝতেই পারি না। আবার যখন তোমাকে পাশে পাই না, তখন অল্প সময়ের
+                দূরত্বও অনেক বেশি মনে হয়। তোমার সঙ্গে কথা বলা, তোমার কণ্ঠ শোনা, তোমার মুখের হাসি দেখা—এসবই এখন আমার
+                প্রতিদিনের অভ্যাসে পরিণত হয়েছে। তুমি আমার কাছে শুধু ভালোবাসার মানুষ নও, তুমি আমার প্রতিদিনের আনন্দ, আমার
+                অভ্যাস, আমার সবচেয়ে প্রিয় সঙ্গী।
+              </p>
+              <p>
+                গত জন্মদিনেও আমি তোমার সঙ্গে ছিলাম। কিন্তু সত্যি বলতে, তোমার জন্য সেদিন তেমন কিছুই করতে পারিনি একটি
+                মাত্র ঘড়ি দেওয়া ছাড়া। তোমার জন্মদিনে তোমাকে নিয়ে সুন্দরভাবে সেলিব্রেশন করা, একটা কেক আনা কিংবা তোমাকে
+                কোনো উপহার দেওয়া—কোনোটাই হয়ে ওঠেনি। এটা নিয়ে আমার নিজের কাছেই অনেক খারাপ লাগে। ইচ্ছে ছিল তোমার দিনটাকে
+                একটু বিশেষ করে তুলব, কিন্তু সেভাবে কিছুই করা হয়নি। তবে জান, সেদিন তোমার পাশে থাকতে পেরেছিলাম, এটাই আমার
+                কাছে অনেক ভালো লাগার ছিল। আশা করি, সামনের দিনগুলোতে তোমার প্রতিটি জন্মদিন আরও সুন্দর করে তুলতে পারব।
+                তোমার মুখের হাসির কারণ হতে চাই, তোমার প্রতিটি বিশেষ দিনে তোমার পাশে থাকতে চাই।
+              </p>
+              <p>
+                হাবিবা, তোমার কাছে আমার চাওয়া খুব বেশি কিছু নয়। তুমি সবসময় এমনই থেকো। আমার সঙ্গে তোমার সব কথা শেয়ার করো,
+                তোমার ভালো লাগা, খারাপ লাগা, অভিমান, অভিযোগ—সবকিছু আমাকে বলো। কখনো কোনো কিছু নিজের মধ্যে জমিয়ে রেখো না।
+                আমাদের সম্পর্কটা আমাদের দুজনের, তাই এটাকে সুন্দর রাখার দায়িত্বও আমাদের দুজনের। আমরা যেন সব পরিস্থিতিতে
+                একে অপরের পাশে থাকতে পারি, একে অপরকে বুঝতে পারি এবং কখনো জেনেশুনে একে অপরকে কষ্ট না দিই।
+              </p>
+              <p>
+                আমি চাই, আজকের এই জন্মদিনের পরও তোমার জীবনের প্রতিটি জন্মদিনে আমি তোমার পাশে থাকি। শুধু জন্মদিন নয়,
+                তোমার জীবনের প্রতিটি আনন্দের দিনে, প্রতিটি খারাপ সময়ে, প্রতিটি প্রয়োজনের মুহূর্তে তোমার হাতটা ধরে রাখতে
+                চাই। অল্প কিছুদিনের জন্য নয়, সম্পূর্ণ ইহকাল তোমার পাশে তোমার হয়েই থাকতে চাই। আমাদের একসঙ্গে কাটানো
+                স্মৃতিগুলোর সংখ্যা যেন দিন দিন বাড়তে থাকে। আজকের এই ছোট ছোট মুহূর্তগুলোই যেন একদিন আমাদের জীবনের সবচেয়ে
+                সুন্দর গল্প হয়ে থাকে।
+              </p>
+              <p>
+                আল্লাহর কাছে দোয়া করি, তোমার জীবনের প্রতিটি দিন সুন্দর হোক। তুমি সুস্থ থাকো, ভালো থাকো, তোমার সব স্বপ্ন
+                পূরণ হোক। তোমার মুখের হাসিটা যেন কখনো হারিয়ে না যায়। জীবনে যত বাধা, যত কঠিন সময়ই আসুক না কেন, তুমি যেন
+                সেগুলো সুন্দরভাবে পার করতে পারো। আর তোমার সেই পথচলায় আমাকেও যেন সবসময় তোমার পাশে থাকার সুযোগ দেন।
+              </p>
+              <p style="font-weight: 700; color: var(--deep-rose); font-size: 1.2rem; margin-top: 1.5rem;">
+                শুভ জন্মদিন, আমার প্রিয় হাবিবা। ❤️
+              </p>
+            </div>
+
+            <!-- Tucked Photo Inside Letter -->
+            <div class="letter-photo-tuck">
+              <div class="tuck-tape" aria-hidden="true"></div>
+              <img src="assets/images/LMC_2%20Apr%2018_31.PORTRAIT.ORIGINAL%20(2).jpg" alt="হাবিবার ছবি" loading="lazy">
+              <span class="tuck-caption">সবসময় এভাবেই সুন্দর থেকো 🌸</span>
+            </div>
+
+            <div class="letter-footer">
+              <div class="letter-sign-block">
+                <span class="sign-label">ইতি,</span>
+                <span class="sign-name">তোমার ভালোবাসার রিয়াদ</span>
+              </div>
+              <div class="wax-seal" aria-hidden="true">
+                <span class="wax-monogram">M&amp;R</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 05: OUR LITTLE STORY (TIMELINE)
+         ======================================================== -->
+    <section id="timeline" class="section timeline-section" aria-labelledby="timelineTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Our Journey</span>
+          <h2 id="timelineTitle" class="section-title">একটা পরিচয় থেকে এতগুলো গল্প...</h2>
+          <p class="section-subtitle">ছোট ছোট পদক্ষেপে গড়ে ওঠা আমাদের ভালোবাসার অধ্যায়</p>
+          <div class="section-divider"><span>⏳</span></div>
+        </header>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <!-- Item 1: First Meeting -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"><span>1</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/1st_picture.jpeg" alt="প্রথম পরিচয়" loading="lazy">
+              </div>
+              <span class="timeline-date">প্রথম পরিচয়</span>
+              <h3 class="timeline-heading">সেই প্রথম ভয়েস কল</h3>
+              <p class="timeline-text">
+                নানুর বাড়ি গিয়ে অনলাইনে না থাকায় তোমার সেই অফলাইন কল। প্রথমবার তোমার মিষ্টি কণ্ঠ শুনেই মনের ভেতর এক
+                অদ্ভুত ভালোলাগা জেগে উঠেছিল।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: First In-person Meeting -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"><span>2</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/2nd_picture.jpg" alt="প্রথম দেখা ও ক্রাউড জোন" loading="lazy">
+              </div>
+              <span class="timeline-date">October 4</span>
+              <h3 class="timeline-heading">প্রথম দেখা ও ক্রাউড জোন</h3>
+              <p class="timeline-text">
+                বাসা থেকে এসে তোমার সঙ্গে দেখা করা, ক্রাউড জোনে বসে একসঙ্গে দই ফুচকা খাওয়া, গল্প করা আর এরপর কলেজে
+                যাওয়ার সেই অবিস্মরণীয় স্মৃতি।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Spending Time Together -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"><span>3</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/3rd_picture.jpg" alt="ভার্সিটি ও পথচলা" loading="lazy">
+              </div>
+              <span class="timeline-date">ভার্সিটি জীবন</span>
+              <h3 class="timeline-heading">প্রতিদিনের পথচলা</h3>
+              <p class="timeline-text">
+                ভার্সিটিতে একসঙ্গে থাকা, প্রয়োজনীয়-অপ্রয়োজনীয় নানা কথা বলা, তোমার বকাঝকা শোনা আর কখনো একঘেয়েমি না লাগা
+                এক গভীর অভ্যাস।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Holding Hands -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"><span>4</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/4th_image.jpg" alt="হাত ধরে হাঁটা" loading="lazy">
+              </div>
+              <span class="timeline-date">নীরব আশ্বাস</span>
+              <h3 class="timeline-heading">হাত ধরে হাঁটা</h3>
+              <p class="timeline-text">
+                রাস্তা দিয়ে পাশাপাশি হেঁটে যাওয়া, হাতের মুঠোয় বিশ্বস্ততার উষ্ণতা—যে মুহূর্তগুলো কখনো ভোলার নয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: Traveling & New Places -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"><span>5</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/5th_image.jpeg" alt="একসঙ্গে ঘুরতে যাওয়া" loading="lazy">
+              </div>
+              <span class="timeline-date">স্মৃতির ডায়েরি</span>
+              <h3 class="timeline-heading">একসঙ্গে ঘুরতে যাওয়া</h3>
+              <p class="timeline-text">
+                বিভিন্ন জায়গায় একসঙ্গে ঘুরে বেড়ানো, নির্মল হাওয়া আর তোমার মুখের হাসি দেখে সারাদিনের ক্লান্তি ভুলে যাওয়ার
+                আনন্দ।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6: Ups and Downs -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"><span>6</span></div>
+            <div class="timeline-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/6th_picture.jpg" alt="বোঝাপড়া ও ভালোবাসা" loading="lazy">
+              </div>
+              <span class="timeline-date">বোঝাপড়া ও ভালোবাসা</span>
+              <h3 class="timeline-heading">ভুল বোঝাবুঝি ও অভিমান</h3>
+              <p class="timeline-text">
+                কখনো মন খারাপ, কখনো অভিমানের দেয়াল। কিন্তু দিনশেষে সব ভুলে আবার একে অপরের কাছেই ফিরে আসা।
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 7: Today -->
+          <div class="timeline-item left highlight-item">
+            <div class="timeline-dot special-dot"><span>❤️</span></div>
+            <div class="timeline-card special-card">
+              <div class="timeline-thumb">
+                <img src="assets/images/7th_picture.jpg" alt="৯ নভেম্বর জন্মদিন" loading="lazy">
+              </div>
+              <span class="timeline-date highlight-badge">9 November</span>
+              <h3 class="timeline-heading">শুভ জন্মদিন, হাবিবা!</h3>
+              <p class="timeline-text">
+                ২০০৪ সালের এই দিনে তোমার জন্ম। গতবার ঘড়ি দেওয়ার বাইরে কিছুই করতে পারিনি, কিন্তু আজ তোমার বিশেষ দিনটিকে
+                পরম ভালোবাসায় সাজিয়েছি।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 06: OUR MEMORY GALLERY (POLAROID & SCRAPBOOK)
+         ======================================================== -->
+    <section id="coupleGallery" class="section gallery-section" aria-labelledby="galleryTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Scrapbook Memories</span>
+          <h2 id="galleryTitle" class="section-title">আমাদের ছোট ছোট সুন্দর স্মৃতিগুলো ❤️</h2>
+          <p class="section-subtitle">কিছু স্মৃতি ছবিতে আটকে থাকে, আর অনুভূতিতে চিরকাল বেঁচে থাকে</p>
+          <div class="section-divider"><span>📸</span></div>
+        </header>
+
+        <div class="gallery-grid" id="couplePhotoGrid">
+          <!-- Couple Card 1 -->
+          <article class="polaroid-card" tabindex="0" data-index="0"
+            data-caption="আমাদের সম্পর্কের প্রথম দিকের সেই মিষ্টি স্মৃতি।">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20251016_114809.jpg" alt="আমাদের স্মৃতি ১" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">আমাদের সম্পর্কের প্রথম দিকের সেই মিষ্টি স্মৃতি।</figcaption>
+          </article>
+
+          <!-- Couple Card 2 -->
+          <article class="polaroid-card" tabindex="0" data-index="1"
+            data-caption="একসঙ্গে কাটানো কিছু নির্মল সুন্দর সময়।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20251029_155529.jpg" alt="আমাদের স্মৃতি ২" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">একসঙ্গে কাটানো কিছু নির্মল সুন্দর সময়।</figcaption>
+          </article>
+
+          <!-- Couple Card 3 -->
+          <article class="polaroid-card" tabindex="0" data-index="2"
+            data-caption="তোমার পাশে বসে গল্প করার চেয়ে শান্তির আর কী হতে পারে!">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20251126_182731.jpg" alt="আমাদের স্মৃতি ৩" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">তোমার পাশে বসে গল্প করার চেয়ে শান্তির আর কী হতে পারে!</figcaption>
+          </article>
+
+          <!-- Couple Card 4 -->
+          <article class="polaroid-card" tabindex="0" data-index="3"
+            data-caption="হাতে হাত রেখে হেঁটে চলার সেই শান্ত বিকেল।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20251128_184045.jpg" alt="আমাদের স্মৃতি ৪" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">হাতে হাত রেখে হেঁটে চলার সেই শান্ত বিকেল।</figcaption>
+          </article>
+
+          <!-- Couple Card 5 -->
+          <article class="polaroid-card" tabindex="0" data-index="4"
+            data-caption="প্রতিটি পদক্ষেপে তোমার স্নিগ্ধ উপস্থিতি।">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20251129_134149.jpg" alt="আমাদের স্মৃতি ৫" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">প্রতিটি পদক্ষেপে তোমার স্নিগ্ধ উপস্থিতি।</figcaption>
+          </article>
+
+          <!-- Couple Card 6 -->
+          <article class="polaroid-card" tabindex="0" data-index="5"
+            data-caption="কিছু স্মৃতি ছবিতে আটকে থাকে, আর অনুভূতিতে চিরকাল বেঁচে থাকে।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG-20251215-WA0075.jpg" alt="আমাদের স্মৃতি ৬" loading="lazy"
+                class="gallery-img fallback-enabled" onerror="this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">কিছু স্মৃতি ছবিতে আটকে থাকে, আর অনুভূতিতে চিরকাল বেঁচে থাকে।
+            </figcaption>
+          </article>
+
+          <!-- Couple Card 7 -->
+          <article class="polaroid-card" tabindex="0" data-index="6"
+            data-caption="ডিসেম্বরের সেই মিষ্টি হাওয়া আর তোমার হাসিমুখ।">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/LMC_12%20Dec%2019_12.jpg" alt="আমাদের স্মৃতি ৭" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">ডিসেম্বরের সেই মিষ্টি হাওয়া আর তোমার হাসিমুখ।</figcaption>
+          </article>
+
+          <!-- Couple Card 8 -->
+          <article class="polaroid-card" tabindex="0" data-index="7"
+            data-caption="নতুন বছরেও আমাদের পথচলা একইভাবে ভালোবাসায় জড়ানো।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20260112_175400.jpg" alt="আমাদের স্মৃতি ৮" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">নতুন বছরেও আমাদের পথচলা একইভাবে ভালোবাসায় জড়ানো।</figcaption>
+          </article>
+
+          <!-- Couple Card 9 -->
+          <article class="polaroid-card" tabindex="0" data-index="8" data-caption="ভালোবাসার দিনে তোমার হাসির আলো।">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/LMC_14%20Feb%2017_41%20(2).jpg" alt="আমাদের স্মৃতি ৯" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">ভালোবাসার দিনে তোমার হাসির আলো।</figcaption>
+          </article>
+
+          <!-- Couple Card 10 -->
+          <article class="polaroid-card" tabindex="0" data-index="9"
+            data-caption="একসঙ্গে ঘুরতে যাওয়ার চমৎকার এক অভিজ্ঞতা।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/LMC_28%20Mar%2018_32%20(1).jpg" alt="আমাদের স্মৃতি ১০" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">একসঙ্গে ঘুরতে যাওয়ার চমৎকার এক অভিজ্ঞতা।</figcaption>
+          </article>
+
+          <!-- Couple Card 11 -->
+          <article class="polaroid-card" tabindex="0" data-index="10"
+            data-caption="তোমার সঙ্গেই তো আমার পুরো পৃথিবীটা রঙিন।">
+            <div class="polaroid-pin" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20260330_172923.jpg" alt="আমাদের স্মৃতি ১১" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">তোমার সঙ্গেই তো আমার পুরো পৃথিবীটা রঙিন।</figcaption>
+          </article>
+
+          <!-- Couple Card 12 -->
+          <article class="polaroid-card" tabindex="0" data-index="11"
+            data-caption="আমাদের গল্পের এই সুন্দর মুহূর্তগুলো চিরকাল জমতে থাকুক।">
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-photo-wrapper">
+              <img src="assets/images/IMG_20260410_183536.jpg" alt="আমাদের স্মৃতি ১২" loading="lazy"
+                class="gallery-img fallback-enabled"
+                onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+              <div class="photo-overlay"><span class="view-btn">View Memory ✨</span></div>
+            </div>
+            <figcaption class="polaroid-caption">আমাদের গল্পের এই সুন্দর মুহূর্তগুলো চিরকাল জমতে থাকুক।</figcaption>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 07: HER BEAUTIFUL MOMENTS (PORTRAIT EXHIBITION)
+         ======================================================== -->
+    <section id="mimGallery" class="section her-moments-section" aria-labelledby="herMomentsTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Dedicated to Mim</span>
+          <h2 id="herMomentsTitle" class="section-title">তুমি আর তোমার সুন্দর সব মুহূর্তগুলো...</h2>
+          <div class="section-divider"><span>✨</span></div>
+        </header>
+
+        <div class="exhibition-layout">
+          <div class="portrait-grid" id="mimPhotoGrid">
+            <!-- Portrait 1 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251024-WA0014.jpg" alt="মিমের ছবি ১" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 2 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251126-WA0004.jpg" alt="মিমের ছবি ২" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 3 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251130-WA0005.jpg" alt="মিমের ছবি ৩" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 4 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251130-WA0008.jpg" alt="মিমের ছবি ৪" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 5 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251215-WA0005.jpg" alt="মিমের ছবি ৫" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 6 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20251215-WA0056.jpg" alt="মিমের ছবি ৬" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 7 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/IMG-20260118-WA0008.jpg" alt="মিমের ছবি ৭" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 8 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/LMC_14%20Apr%2011_12%20(5).jpg" alt="মিমের ছবি ৮" loading="lazy"
+                  class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+
+            <!-- Portrait 9 -->
+            <div class="portrait-card" tabindex="0">
+              <div class="portrait-frame">
+                <img src="assets/images/single_img/Screenshot_2025-10-11-19-42-50-493_com.facebook.orca.jpg"
+                  alt="মিমের ছবি ৯" loading="lazy" class="portrait-img fallback-enabled"
+                  onerror="this.onerror=null; this.parentElement.classList.add('img-fallback');">
+                <div class="portrait-glow"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Living Video Memory Card -->
+          <div class="video-memory-wrapper" id="videoSection">
+            <div class="video-memory-card" id="videoMemoryCard">
+              <div class="video-card-badge">A Living Memory 🎬</div>
+              <h3 class="video-card-title">আমাদের একটি জীবন্ত মুহূর্ত</h3>
+              <p class="video-card-desc">"কিছু অনুভূতি শুধু স্থির ছবিতে বন্দি থাকে না, স্মৃতির চলমান ধারায় চিরকাল বেঁচে
+                থাকে..."</p>
+              <div class="video-frame-container">
+                <video class="memory-video" controls preload="metadata" playsinline
+                  poster="assets/images/LMC_14%20Apr%2017_32.PORTRAIT%20(1).jpg">
+                  <source src="assets/images/VID_20260414_165450.mp4" type="video/mp4">
+                  আপনার ব্রাউজারে ভিডিও প্লেয়ারটি সাপোর্ট করছে না।
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 08: THINGS I LOVE ABOUT YOU
+         ======================================================== -->
+    <section id="thingsILove" class="section things-love-section" aria-labelledby="thingsLoveTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Little Admirations</span>
+          <h2 id="thingsLoveTitle" class="section-title">তোমার মধ্যে যে সুন্দর বিষয়গুলো আমার ভালো লাগে...</h2>
+          <p class="section-subtitle">যে ছোট ছোট কারণেই তুমি আমার মনের একদম গভীরে জায়গা করে নিয়েছ</p>
+          <div class="section-divider"><span>💖</span></div>
+        </header>
+
+        <div class="admiration-grid">
+          <!-- Card 1 -->
+          <div class="love-card">
+            <div class="card-icon-box">🎙️</div>
+            <h3 class="love-card-title">তোমার মিষ্টি কণ্ঠস্বর</h3>
+            <p class="love-card-desc">
+              নানুর বাড়ি থাকার সময়ে তোমার সেই প্রথম অফলাইন কল। প্রথমবার তোমার মিষ্টি কণ্ঠ শুনেই মনের অজান্তে প্রেমে পড়ে
+              গিয়েছিলাম, যা আজও আমার সবচেয়ে প্রিয়।
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="love-card">
+            <div class="card-icon-box">⏳</div>
+            <h3 class="love-card-title">একসঙ্গে কাটানো সময়</h3>
+            <p class="love-card-desc">
+              ভার্সিটিতে একসঙ্গে থাকা আর ঘুরে বেড়ানো। এত সময় একসঙ্গে কাটানোর পরও কখনো একঘেয়েমি আসে না, বরং তোমার প্রতি
+              ভালোলাগাটা যেন দিন দিন আরও বাড়ে।
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="love-card">
+            <div class="card-icon-box">💬</div>
+            <h3 class="love-card-title">তোমার বকাঝকা ও কথা</h3>
+            <p class="love-card-desc">
+              তোমার সাথে এ টু জেড সব কথা শেয়ার করা, প্রয়োজনীয়-অপ্রয়োজনীয় খুনসুটি আর তোমার মিষ্টি বকাঝকা শোনা—এগুলো এখন
+              আমার প্রতিদিনের অভ্যাসে পরিণত হয়েছে।
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="love-card">
+            <div class="card-icon-box">🤝</div>
+            <h3 class="love-card-title">হাত ধরে পাশে থাকা</h3>
+            <p class="love-card-desc">
+              তোমার হাতটা আলতো করে ধরে রাখা আর পাশাপাশি বসে গল্প করা। তোমার সঙ্গে কাটানো এই ছোট ছোট সাধারণ মুহূর্তগুলোই
+              আমার কাছে সবচেয়ে অসাধারণ।
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="love-card">
+            <div class="card-icon-box">✨</div>
+            <h3 class="love-card-title">আমার নিত্যদিনের প্রিয় অভ্যাস</h3>
+            <p class="love-card-desc">
+              তুমি শুধু ভালোবাসার মানুষ নও, তুমি আমার প্রতিদিনের আনন্দ, মিষ্টি এক অভ্যাস আর জীবনের সবচেয়ে প্রিয় সঙ্গী।
+              তোমাকে ছাড়া একটা দিনও এখন আর ভাবা যায় না।
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="love-card">
+            <div class="card-icon-box">🕊️</div>
+            <h3 class="love-card-title">সারাজীবন পাশে থাকার নির্ভরতা</h3>
+            <p class="love-card-desc">
+              ভালো সময় কিংবা কঠিন পরিস্থিতি—সবকিছুতেই দুজন দুজনকে আগলে রাখা। অল্প কিছুদিনের জন্য নয়, সম্পূর্ণ ইহকাল
+              তোমার পাশে তোমার হয়েই থাকতে চাই।
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 09: OUR LITTLE UPS AND DOWNS (MATURE REFLECTION)
+         ======================================================== -->
+    <section id="upsAndDowns" class="section ups-downs-section" aria-labelledby="reflectionTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">A Mature Bond</span>
+          <h2 id="reflectionTitle" class="section-title">সব গল্পই তো একরকম হয় না...</h2>
+          <p class="section-subtitle">সম্পর্কের পরিপক্কতা লুকিয়ে থাকে কঠিন সময়গুলোকে একসাথে পেরিয়ে যাওয়ার মাঝে</p>
+          <div class="section-divider"><span>🍃</span></div>
+        </header>
+
+        <div class="reflection-card">
+          <div class="reflection-quote-sign">“</div>
+          <div class="reflection-content">
+            <p>
+              আমাদের গল্পেও কিছু কঠিন সময় এসেছে। কখনো কথা কাটাকাটি, কখনো অভিমান, কখনো একে অপরকে বুঝতে একটু সময় লেগেছে।
+            </p>
+            <p>
+              কিন্তু আমি বিশ্বাস করি, সম্পর্কের সৌন্দর্য শুধু সবসময় ভালো থাকার মধ্যে নয়; বরং খারাপ সময়গুলোকে কীভাবে
+              একসঙ্গে সামলানো যায়, তার মধ্যেও লুকিয়ে থাকে।
+            </p>
+            <p class="reflection-highlight">
+              আমি চাই, আমরা অতীতের খারাপ মুহূর্তগুলোকে আঁকড়ে না ধরে সেখান থেকে শিখি। সুন্দর সময়গুলোকে আরও সুন্দর করে
+              তুলি।
+            </p>
+          </div>
+          <div class="reflection-badge">
+            <span>একসাথে এগিয়ে চলার শপথ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 10: A LITTLE GIFT FOR YOU (INTERACTIVE 3D GIFT BOX)
+         ======================================================== -->
+    <section id="giftBox" class="section gift-section" aria-labelledby="giftTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">A Special Token</span>
+          <h2 id="giftTitle" class="section-title">তোমার জন্য একটা ছোট্ট উপহার...</h2>
+          <!--<p class="section-subtitle">বক্সটা খুলে দেখো, এর ভেতর কী লুকিয়ে রাখা আছে</p>-->
+          <div class="section-divider"><span>🎁</span></div>
+        </header>
+
+        <div class="gift-box-area">
+          <div class="gift-3d-box" id="interactiveGiftBox" role="button" tabindex="0" aria-label="Open gift box">
+            <!-- Box Lid with Ribbon Bow -->
+            <div class="box-lid" id="boxLid">
+              <div class="ribbon-bow">
+                <span class="bow-loop left"></span>
+                <span class="bow-knot"></span>
+                <span class="bow-loop right"></span>
+              </div>
+              <div class="ribbon-band-horizontal"></div>
+            </div>
+
+            <!-- Box Body -->
+            <div class="box-body" id="boxBody">
+              <div class="ribbon-band-vertical"></div>
+              <div class="gift-inner-glow"></div>
+            </div>
+          </div>
+
+          <div class="gift-control-wrap">
+            <button id="btnOpenGift" class="btn btn-primary btn-sparkle" type="button">
+              <span>উপহারটা খোলো 🎁</span>
+            </button>
+          </div>
+
+          <!-- Revealed Gift Surprise Message Card -->
+          <div class="gift-reveal-card hidden" id="giftRevealCard" aria-live="polite">
+            <div class="gift-card-inner">
+              <span class="gift-card-badge">Heartfelt Surprise</span>
+              <div class="gift-photo-preview">
+                <img src="assets/images\LMC_14 Apr 18_35 (2).jpg" alt="Special memory" loading="lazy">
+              </div>
+              <h3 class="gift-card-title">তোমার জন্য আমার অনুভব ✨</h3>
+              <p class="gift-card-text">
+                "এই উপহারটা হয়তো খুব বড় কিছু নয়, কিন্তু এর প্রতিটি অংশে লুকিয়ে আছে তোমার জন্য আমার ভালোবাসা, যত্ন আর
+                অনেকগুলো সুন্দর অনুভূতি।<br><br>
+                <strong>সবসময় নিজের মতো করে সুন্দর থেকো।"</strong>
+              </p>
+              <div class="gift-flower-sign">🌸 🌸 🌸</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 11: MAKE A WISH (STARRY SKY INTERACTION)
+         ======================================================== -->
+    <section id="makeAWish" class="section wish-section" aria-labelledby="wishTitle">
+      <div class="wish-night-sky" id="wishNightSky" aria-hidden="true"></div>
+
+      <div class="section-container relative-z">
+        <header class="section-header light-text">
+          <span class="section-eyebrow">Your Special Moment</span>
+          <h2 id="wishTitle" class="section-title">এবার তোমার পালা, হাবিবা!</h2>
+          <p class="section-subtitle"></p>
+          <div class="section-divider"><span>⭐</span></div>
+        </header>
+
+        <div class="wish-candle-pod">
+          <div class="magical-candle">
+            <div class="magical-flame" id="wishFlame">
+              <span class="glow-halo"></span>
+            </div>
+            <div class="magical-wick"></div>
+            <div class="magical-stick"></div>
+          </div>
+
+          <p class="wish-prompt-text" id="wishPrompt">চোখ বন্ধ করে একটা সুন্দর ইচ্ছা করো...</p>
+
+          <button id="btnMakeWish" class="btn btn-light-glow" type="button">
+            <span>আমি Wish করেছি ✨</span>
+          </button>
+
+          <div class="wish-success-box hidden" id="wishSuccessBox" aria-live="polite">
+            <div class="shooting-star-burst"></div>
+            <p class="wish-blessing-text">
+              "তোমার প্রতিটি সুন্দর ইচ্ছা একদিন সত্যি হোক।"
+            </p>
+            <span class="wish-blessing-sub">আমীন 🤲 • আকাশের তারারাও আজ তোমার খুশিতে হাসছে</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 11.5: RAPID MEMORY REEL (FAST SLIDE & MUSIC)
+         ======================================================== -->
+    <section id="fastMemoriesReel" class="section fast-reel-section" aria-labelledby="reelTitle">
+      <div class="section-container">
+        <header class="section-header">
+          <span class="section-eyebrow">Flashback Moments</span>
+          <h2 id="reelTitle" class="section-title">এক ঝলকে আমাদের অগণিত স্মৃতি... 🎬</h2>
+          <p class="section-subtitle">আমাদের ভালোবাসার না বলা হাজারো স্মৃতি ও সুন্দর মুহূর্ত</p>
+          <div class="section-divider"><span>⚡</span></div>
+        </header>
+
+        <div class="reel-card-container">
+          <!-- Cinema Fast Slide Display -->
+          <div class="reel-display-frame">
+            <div class="reel-top-bar">
+              <span class="reel-counter-badge">Memory <span id="reelCurrentNum">1</span> / <span id="reelTotalNum">84</span></span>
+            </div>
+
+            <div class="reel-image-viewport">
+              <img id="reelMainImg" src="assets/images/first_bday_celebration in varsity.jpg" alt="আমাদের স্মৃতি" loading="eager">
+              <div class="reel-shutter-glow"></div>
+            </div>
+
+            <!-- Music Progress Tracker (3:34 - 4:22 = 48s) -->
+            <div class="reel-audio-tracker">
+              <div class="reel-time-labels">
+                <span class="reel-current-time" id="reelTimerDisplay">03:34</span>
+                <span class="reel-sync-label">🎵 Song Sync (3:34 ➔ 4:22)</span>
+                <span class="reel-end-time">04:22</span>
+              </div>
+              <div class="reel-progress-bar">
+                <div class="reel-progress-fill" id="reelProgressFill"></div>
+              </div>
+            </div>
+
+            <!-- Control Actions -->
+            <div class="reel-actions">
+              <button id="btnToggleReel" class="btn btn-primary btn-sparkle" type="button">
+                <span id="reelBtnIcon">▶</span>
+                <span id="reelBtnText">Start Fast Reel &amp; Music 🎶</span>
+              </button>
+            </div>
+
+            <!-- Romantic Audio Player Card (HTML5 Local Audio - Zero Iframe/Embed Block) -->
+            <div class="reel-audio-player-card" id="reelAudioCard">
+              <audio id="reelLocalAudio" preload="auto">
+                <source src="assets/music/reel_music.m4a" type="audio/mp4">
+                <source src="assets/music/reel_music.webm" type="audio/webm">
+              </audio>
+              <div class="audio-card-inner">
+                <div class="audio-disc-wrap">
+                  <div class="audio-vinyl-disc" id="audioVinylDisc">
+                    <span class="disc-heart">💖</span>
+                  </div>
+                </div>
+                <div class="audio-track-info">
+                  <span class="audio-track-tag">Synced Birthday Soundtrack</span>
+                  <h4 class="audio-track-name">Tera Mera Rishta Purana 🎶</h4>
+                  <p class="audio-track-artist">Mustafa Zahid • Awarapan (3:34 ➔ 4:22)</p>
+                </div>
+                <div class="audio-visualizer-bars" id="audioBars">
+                  <span class="bar bar-1"></span>
+                  <span class="bar bar-2"></span>
+                  <span class="bar bar-3"></span>
+                  <span class="bar bar-4"></span>
+                  <span class="bar bar-5"></span>
+                  <span class="bar bar-6"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 12: MUSIC & BIRTHDAY ATMOSPHERE (FLOATING WIDGET)
+         ======================================================== -->
+    <div id="floatingMusicPlayer" class="floating-music-player" aria-label="Birthday Atmosphere Music Player">
+      <div class="player-disc" id="playerDisc" aria-hidden="true">
+        <div class="disc-center"></div>
+      </div>
+
+      <div class="player-details">
+        <div class="player-track-info">
+          <span class="track-status" id="trackStatus">আমাদের জন্মদিনের সুর</span>
+          <span class="track-title">Happy Birthday Mim 🎵</span>
+        </div>
+
+        <div class="player-controls">
+          <button id="btnPlayPause" class="player-btn" aria-label="Play or Pause music">
+            <span id="playIcon">▶</span>
+          </button>
+
+          <div class="player-progress-bar" id="progressBarContainer">
+            <div class="player-progress-fill" id="progressFill"></div>
+          </div>
+
+          <button id="btnMuteToggle" class="player-btn sound-btn" aria-label="Toggle sound mute">
+            <span id="volumeIcon">🔊</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hidden Local Audio Element with Web Audio API Fallback -->
+      <audio id="birthdayAudio" preload="auto">
+        <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- ========================================================
+         SECTION 13: FINAL BIRTHDAY SURPRISE (EMOTIONAL CLIMAX)
+         ======================================================== -->
+    <section id="finalSurprise" class="section final-surprise-section" aria-labelledby="finalTitle">
+      <div class="final-glow-backdrop" aria-hidden="true"></div>
+
+      <div class="section-container relative-z">
+        <div class="final-card-wrapper">
+          <div class="final-sparkle-halo"></div>
+
+          <header class="section-header">
+            <span class="section-eyebrow">Forever &amp; Always</span>
+            <h2 id="finalTitle" class="section-title climax-title">শেষ নয়, আমাদের গল্পের আরও অনেক সুন্দর মুহূর্ত বাকি...
+            </h2>
+            <div class="section-divider"><span>🌹</span></div>
+          </header>
+
+          <div class="final-letter-body">
+            <p>
+              হাবিবা, আজকের এই ছোট্ট আয়োজনের মাধ্যমে তোমাকে শুধু একটা কথাই বলতে চাই—তুমি ভালো থেকো, হাসিখুশি থেকো, নিজের
+              স্বপ্নগুলো পূরণ করো।
+            </p>
+            <p>
+              তোমার জীবনে অনেক সুন্দর দিন আসুক। তোমার প্রতিটি নতুন বছর আগের বছরের চেয়ে আরও সুন্দর হোক।
+            </p>
+            <p>
+              আমাদের একসঙ্গে কাটানো মুহূর্তগুলো এভাবেই স্মৃতির পাতায় জমতে থাকুক।
+            </p>
+            <p class="final-big-wish">
+              আবারও শুভ জন্মদিন, হাবিবা ❤️
+            </p>
+          </div>
+
+          <div class="final-signature">
+            <p class="signature-tag">With Endless Love,</p>
+            <h3 class="signature-author">MD. Riad Hasan</h3>
+            <span class="signature-sub">ভালোবাসায় তোমার রিয়াদ ❤️</span>
+          </div>
+
+          <!-- Pulsing Love Heart Button -->
+          <div class="final-heart-container">
+            <button class="beating-heart-btn" id="btnBigHeart" aria-label="Send endless love"
+              title="Tap to send endless love">
+              <svg viewBox="0 0 32 32" class="big-heart-svg">
+                <path
+                  d="M16 28.5L13.8 26.5C5.8 19.3 0.5 14.5 0.5 8.5C0.5 3.6 4.3 0 9 0C11.7 0 14.2 1.3 16 3.3C17.8 1.3 20.3 0 23 0C27.7 0 31.5 3.6 31.5 8.5C31.5 14.5 26.2 19.3 18.2 26.5L16 28.5Z" />
+              </svg>
+            </button>
+            <span class="heart-hint">হৃদয়ে আলতো স্পর্শ করো ❤️</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       SECTION 14: FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-heart">❤️</div>
+      <p class="footer-primary-text">Made with love, especially for Mim. ❤️</p>
+      <!--<p class="footer-secondary-text">একটি ছোট্ট ডিজিটাল আয়োজন, অনেকগুলো সুন্দর অনুভূতি নিয়ে।</p>-->
+      <p class="footer-copy">&copy; MD. Riad Hasan • All Rights Reserved</p>
+
+      <button id="btnBackToTop" class="btn-back-to-top" aria-label="Back to top of the page">
+        <span>↑</span>
+        <span class="top-tooltip">উপরে যাও</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Photo Galleries -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">✕</button>
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+
+      <div class="lightbox-content">
+        <div class="lightbox-image-wrap" id="lightboxImageWrap">
+          <img id="lightboxImg" src="" alt="Enlarged memory photo">
+        </div>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
