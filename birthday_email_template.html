@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Email Preview & Copy Helper | For Umme Habiba Mim</title>
+  <style>
+    body {
+      background: #FDF4F6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hind Siliguri", Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #4A3E44;
+    }
+
+    .instructions-box {
+      max-width: 600px;
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #EAC8D2;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(184, 114, 137, 0.08);
+      box-sizing: border-box;
+    }
+
+    .instructions-box h3 {
+      margin: 0 0 10px;
+      color: #8C4058;
+      font-size: 1.15rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .instructions-box ol {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      color: #55444B;
+    }
+
+    .btn-copy-all {
+      display: inline-block;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #B87289 0%, #8C4058 100%);
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 99px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(140, 64, 88, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy-all:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(140, 64, 88, 0.4);
+    }
+
+    .copy-success {
+      display: none;
+      color: #2E7D32;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-left: 12px;
+    }
+
+    .preview-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #B87289;
+      margin-bottom: 12px;
+    }
+
+    /* Outer wrapper for visual centering on this page */
+    .email-preview-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Instructions Helper Panel -->
+  <div class="instructions-box">
+    <h3>💌 জিমেইলে পাঠানোর নিয়ম:</h3>
+    <ol>
+      <li>নিচের <strong>"📋 ইমেইল কার্ডটি কপি করো"</strong> বাটনে ক্লিক করুন (অথবা কার্ডের ওপর মাউস টেনে সিলেক্ট করে <code>Ctrl + C</code> চাপুন)।</li>
+      <li>আপনার <strong>Gmail</strong>-এ গিয়ে <strong>Compose</strong> (নতুন বার্তা) খুলুন।</li>
+      <li>ইমেইলের লেখার বক্সে মাউস রেখে <strong><code>Ctrl + V</code></strong> পেস্ট করে দিন!</li>
+      <li>সাবজেক্ট হিসেবে লিখুন: <code>শুভ জন্মদিন, প্রিয় হাবিবা! ❤️ [একটি ছোট্ট সারপ্রাইজ ✨]</code></li>
+      <li>এবার মিমের ইমেইল অ্যাড্রেস বসিয়ে <strong>Send</strong> করে দিন!</li>
+    </ol>
+    <div style="display: flex; align-items: center; margin-top: 6px;">
+      <button class="btn-copy-all" id="btnCopyEmail">📋 ইমেইল কার্ডটি কপি করো</button>
+      <span class="copy-success" id="copySuccess">✓ কার্ডটি কপি হয়েছে! জিমেইলে গিয়ে Ctrl+V দিন</span>
+    </div>
+  </div>
+
+  <div class="preview-label">▼ ইমেইলের প্রিভিউ (যেমনিভাবে মিম দেখতে পাবে) ▼</div>
+
+  <!-- ========================================================
+       THE ACTUAL EMAIL HTML CARD (100% INLINE STYLES FOR GMAIL)
+       ======================================================== -->
+  <div class="email-preview-container" id="emailCardContainer">
+    <div id="emailCard" style="max-width: 540px; width: 100%; background-color: #FFFFFF; border: 1.5px solid #F3C4D0; border-radius: 24px; padding: 40px 28px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hind Siliguri', 'Noto Serif Bengali', Arial, sans-serif; box-shadow: 0 12px 36px rgba(184, 114, 137, 0.12); box-sizing: border-box; margin: 0 auto;">
+      
+      <!-- Top Decorative Icons -->
+      <div style="font-size: 36px; margin-bottom: 12px; line-height: 1;">
+        🌸 ✨ 💌
+      </div>
+
+      <!-- Eyebrow Badge -->
+      <div style="display: inline-block; background-color: #FDF0F3; color: #B87289; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 99px; margin-bottom: 16px; border: 1px solid #F8D5DE;">
+        For Umme Habiba Mim
+      </div>
+
+      <!-- Main Birthday Headline -->
+      <h1 style="color: #8C4058; font-size: 26px; font-weight: 700; margin: 0 0 16px; line-height: 1.4;">
+        শুভ জন্মদিন, প্রিয় হাবিবা! ❤️
+      </h1>
+
+      <!-- Heartfelt Body Copy -->
+      <p style="color: #4A3E44; font-size: 15px; line-height: 1.8; margin: 0 0 20px; text-align: center;">
+        আজকের এই বিশেষ দিনটি শুধু তোমার। তোমার জন্য ভালোবাসা আর পরম যত্নে সাজিয়েছি ছোট্ট একটি মায়াবী পৃথিবী—যেখানে সংরক্ষিত আছে আমাদের না বলা হাজারো অনুভূতি, কথা আর সুন্দর স্মৃতি।
+      </p>
+
+      <p style="color: #6D5B63; font-size: 14px; line-height: 1.7; margin: 0 0 28px; font-style: italic;">
+        "তুমি হাসলে যেন চারপাশটা আপনা থেকেই আলোকিত হয়ে ওঠে..."
+      </p>
+
+      <!-- Clickable Action Button (Links directly to your live website) -->
+      <div style="margin: 32px 0 28px;">
+        <a href="https://mdriad40.github.io/birthday/" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(135deg, #B87289 0%, #8C4058 100%); background-color: #8C4058; color: #FFFFFF !important; text-decoration: none !important; font-size: 16px; font-weight: bold; padding: 15px 38px; border-radius: 99px; display: inline-block; box-shadow: 0 8px 22px rgba(140, 64, 88, 0.35); letter-spacing: 0.3px;">
+          🎁 তোমার সারপ্রাইজটি খোলো ✨
+        </a>
+      </div>
+
+      <!-- Hint under button -->
+      <p style="color: #A38A95; font-size: 12px; margin: 0 0 24px;">
+        (বোতামে ক্লিক করলেই তোমার জন্য তৈরি বিশেষ ওয়েবসাইটটি খুলে যাবে)
+      </p>
+
+      <!-- Subtle Divider -->
+      <hr style="border: none; border-top: 1px dashed #F0C4D0; margin: 24px auto; width: 80%;">
+
+      <!-- Sender Signature -->
+      <div style="margin-top: 20px;">
+        <p style="color: #8C4058; font-size: 15px; font-weight: 700; margin: 0;">
+          মোহাম্মদ রিয়াদ হাসান ❤️
+        </p>
+        <span style="color: #9C828D; font-size: 13px; font-style: italic;">
+          — সবসময় তোমার মঙ্গল কামনায়
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const btnCopyEmail = document.getElementById('btnCopyEmail');
+    const copySuccess = document.getElementById('copySuccess');
+    const emailCard = document.getElementById('emailCard');
+
+    btnCopyEmail.addEventListener('click', async () => {
+      try {
+        // Modern Clipboard API for rich text/HTML copying
+        const htmlContent = emailCard.outerHTML;
+        const textContent = emailCard.innerText;
+        
+        const blobHtml = new Blob([htmlContent], { type: 'text/html' });
+        const blobText = new Blob([textContent], { type: 'text/plain' });
+        
+        const data = [new ClipboardItem({
+          'text/html': blobHtml,
+          'text/plain': blobText
+        })];
+        
+        await navigator.clipboard.write(data);
+        
+        copySuccess.style.display = 'inline';
+        btnCopyEmail.textContent = '✓ কপি করা হয়েছে!';
+        btnCopyEmail.style.background = '#2E7D32';
+        
+        setTimeout(() => {
+          btnCopyEmail.textContent = '📋 ইমেইল কার্ডটি কপি করো';
+          btnCopyEmail.style.background = 'linear-gradient(135deg, #B87289 0%, #8C4058 100%)';
+        }, 4000);
+      } catch (err) {
+        // Fallback: Select contents for manual copy
+        const range = document.createRange();
+        range.selectNodeContents(emailCard);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        document.execCommand('copy');
+        
+        copySuccess.style.display = 'inline';
+        copySuccess.textContent = '✓ কার্ডটি সিলেক্ট ও কপি হয়েছে! জিমেইলে Ctrl+V দিন';
+      }
+    });
+  </script>
+</body>
+</html>
